@@ -1,0 +1,58 @@
+<?php
+function page_url($url){	
+	$adress=explode("/",$url);
+	if ($adress[1]=='standard'){
+		$id=explode("=",$adress[4]);
+		if ((is_numeric($id))&&($id>0)){
+			if ($adress[3]=='cat'){
+				$data=array('catalogue_id'=>$id);
+				if (getNumRow('catalogue',$data)){
+					$data=getAllRow('catalogue',$data);
+					$furl="/".$data[0]['furl']."/";
+				}
+				else{
+					$furl="/";
+				}
+			}
+			else{
+				$data=array('id'=>$id);
+				if (getNumRow('statpage',$data)){
+					$data=getAllRow('statpage',$data);
+					$furl="/".$data[0]['furl']."/";
+				}
+				else{
+					$furl="/";
+				}
+			}
+		}
+		else{
+			$furl="/";
+		}
+	}
+	else{
+		$furl="/".$adress[3]."/";
+	}
+	return $furl;
+}
+function content_mod($content){
+	$str=str_replace('"../../','"/',$content);
+	return $str;	 
+}
+function translite($st){
+    // Ñíà÷àëà çàìåíÿåì "îäíîñèìâîëüíûå" ôîíåìû.
+    $st=strtr($st,"àáâãäå¸çèéêëìíîïðñòóôõúûý_",
+    "abvgdeeziyklmnoprstufhyiei");
+    $st=strtr($st,"ÀÁÂÃÄÅ¨ÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÚÛÝ_",
+    "ABVGDEEZIYKLMNOPRSTUFHYIEI");
+    // Çàòåì - "ìíîãîñèìâîëüíûå".
+    $st=strtr($st,array("æ"=>"zh", "ö"=>"ts", "÷"=>"ch", "ø"=>"sh", 
+                        "ù"=>"shch","ü"=>"", "þ"=>"yu", "ÿ"=>"ya",
+                        "Æ"=>"ZH", "Ö"=>"TS", "×"=>"CH", "Ø"=>"SH", 
+                        "Ù"=>"SHCH","Ü"=>"", "Þ"=>"YU", "ß"=>"YA",
+                        "¿"=>"i", "¯"=>"Yi", "º"=>"ie", "ª"=>"Ye", " "=>"_","/"=>"-")
+             );
+ 
+    // Âîçâðàùàåì ðåçóëüòàò.
+    return $st;
+  }
+?>
