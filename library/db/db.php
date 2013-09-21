@@ -4,8 +4,12 @@
 	ini_set(’magic_quotes_sybase’, 0);
 	ini_set("session.use_trans_sid",true);
 	session_start();
+<<<<<<< HEAD
 	$conn=dbConnect('localhost','root','','imibsuru_ru');	
 	//$conn=dbConnect('127.0.0.3','imi_bsu_ru','UVHrbDXGatxcYPYK','imi_bsu_ru');	
+=======
+	$conn=dbConnect('localhost','root','','imibsuru_ru');		
+>>>>>>> ddea2953c8ed33a72df7516dad90007d20a4e8e5
 	function dbConnect($dbhost,$dblogin,$dbpassword,$dbname){
    		$result = mysql_connect($dbhost,$dblogin,$dbpassword); 
    		if (!$result){return false;}
