@@ -1,0 +1,20 @@
+@charset "windows-1251";
+/* CSS Document */
+*{ margin:0; padding:0;}
+body {font-family:Arial, Helvetica, sans-serif;font-size:11px; background-color:#FFF;}
+#wrapper {width:30%; min-width:350px; min-height:150px; background-color:#FAFAFA; border:2px solid #424242; margin:15% auto; text-align:center; box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; -moz-box-shadow:0 0 10px #000; -o-box-shadow:0 0 10px #000; padding-bottom:0px;}
+#wrapper ul {width:100%;}
+#wrapper ul li {list-style:none; width:100%; text-align:inherit; margin-top:10px; margin-left:0px;}
+#wrapper ul li .pole {width:90%; height:23px; text-align:center; border:1px inset #CCC;}
+#wrapper ul li .pole:focus {outline-color:#0CF;}
+#wrapper ul li .buttons {width:91%; height:27px;  color:#FAFAFA; border:1px outset #090; cursor:pointer; font-weight:bold; text-shadow:0 1px #000; font-size:14px;background:linear-gradient(#0C0,#090);background:-webkit-linear-gradient(#0C0,#090);background:-moz-linear-gradient(#0C0,#090);background:-o-linear-gradient(#0C0,#090); background:-ms-linear-gradient(#0C0,#090);}
+#wrapper ul li .buttons:active {background:linear-gradient(#099F00,#090);background:-webkit-linear-gradient(#099F00,#090);background:-moz-linear-gradient(#099F00,#090);background:-o-linear-gradient(#099F00,#090); background:-ms-linear-gradient(#099F00,#090); border:1px inset #060;}
+#wrapper,#wrapper .pole,#wrapper .buttons {border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px;}
+
+#warning {position:absolute; z-index:9999; display:none; padding:10px; border-bottom-right-radius:5px;font-weight:bold;background-color:#C00; border-bottom:2px solid #600; border-right:2px solid #600; top:0; left:0;}
+
+
+
+
+
+
