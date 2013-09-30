@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-03-28 03:19:00
+<?php /* Smarty version Smarty-3.0.6, created on 2013-09-29 16:59:11
          compiled from "template/cabHeader.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:245145153b6a40235e5-30692378%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:267605247ddcf976e83-39847994%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fd38d122a74e0657b741492cb150976acaca67c7' => 
     array (
       0 => 'template/cabHeader.tpl',
-      1 => 1340615712,
+      1 => 1380417001,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '245145153b6a40235e5-30692378',
+  'nocache_hash' => '267605247ddcf976e83-39847994',
   'function' => 
   array (
   ),
@@ -63,7 +63,7 @@ $_smarty_tpl->decodeProperties(array (
   <tr>
     <td colspan="3" class="subhead">Ваш статус: <b><?php echo $_smarty_tpl->getVariable('status')->value;?>
 </b> (<a href="<?php echo $_smarty_tpl->getVariable('sitefolder')->value;?>
-/standard/admin/logOut.php">Выйти)</a></td>
+/standard/admin/logOut.php">Выйти</a>)</td>
   </tr>
   <tr>
     <td colspan="3" valign="top">
