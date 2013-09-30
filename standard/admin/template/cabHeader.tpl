@@ -40,7 +40,7 @@
     <td class="head_left">Личный кабинет</td><td class="head_center">&nbsp;</td><td class="head_right">&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="3" class="subhead">Ваш статус: <b>{$status}</b> (<a href="{$sitefolder}/standard/admin/logOut.php">Выйти)</a></td>
+    <td colspan="3" class="subhead">Ваш статус: <b>{$status}</b> (<a href="{$sitefolder}/standard/admin/logOut.php">Выйти</a>)</td>
   </tr>
   <tr>
     <td colspan="3" valign="top">
